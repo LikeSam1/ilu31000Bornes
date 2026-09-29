@@ -1,7 +1,7 @@
 package cartes;
 
 public class JeuDeCartes {
-	private static final int NB_MAX_CARTES = 110;
+	private static final int NB_MAX_CARTES = 106;
 	
 	private static class Configuration{
 		private int nbExemplaire;
@@ -54,9 +54,11 @@ public class JeuDeCartes {
 	
 	public Carte[] donnerCartes() {
 		Carte[] tabCartes = new Carte[NB_MAX_CARTES];
+		int index = 0;
 		for (Configuration configuration : typesDeCartes) {
 			for (int i = 0; i < configuration.getNbExemplaire(); i++) {
-				tabCartes[i] = configuration.carte;
+				tabCartes[index] = configuration.carte;
+				index++;
 			}
 		}
 		return tabCartes;
