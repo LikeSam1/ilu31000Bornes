@@ -7,9 +7,7 @@ public class TestJeuDeCartes {
 		JeuDeCartes jeu = new JeuDeCartes();
 		System.out.println("JEU:\n" + jeu.afficherJeuDeCarte());
 		
-		/*
-		 * if (!jeu.checkCount()) { System.out.println("erreur de nombre"); }
-		 */
+		if (!jeu.checkCount()) { System.out.println("erreur de nombre"); }
 
 	}
 }

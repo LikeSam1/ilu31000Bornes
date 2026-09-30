@@ -1,6 +1,5 @@
 package cartes;
 
-import java.security.PrivateKey;
 
 public enum Type {
 	FEU("Feu vert", "Feu rouge", "Prioritaire"), 

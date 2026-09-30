@@ -7,8 +7,4 @@ public class DebutLimite extends Limite {
 		return "DebutLimite";
 	}
 
-	public DebutLimite() {
-		// TODO Auto-generated constructor stub
-	}
-
 }

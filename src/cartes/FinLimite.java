@@ -7,8 +7,4 @@ public class FinLimite extends Limite {
 		return "FinLimite";
 	}
 
-	public FinLimite() {
-		// TODO Auto-generated constructor stub
-	}
-
 }
