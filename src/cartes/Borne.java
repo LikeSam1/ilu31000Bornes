@@ -18,12 +18,12 @@ public class Borne extends Carte {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Borne borne) {
-			Integer kmP = new Integer(this.km);
-			return kmP == borne.getKm();
-			}
-			return false;
+		return super.equals(obj) && km == ((Borne) obj).km;
 	}
 
+	@Override
+	public int hashCode() {
+	    return 31 * super.hashCode() + km;
+	}
 
 }

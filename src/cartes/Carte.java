@@ -3,7 +3,12 @@ package cartes;
 public abstract class Carte {
 	@Override
 	public boolean equals(Object obj) {
-		return this.getClass().equals(obj.getClass());
+		return obj != null && getClass() == obj.getClass();
+	}
+	
+	@Override
+	public int hashCode() {
+	    return getClass().hashCode();
 	}
 
 }

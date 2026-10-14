@@ -1,5 +1,9 @@
 package cartes;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class JeuDeCartes {
 	private Configuration[] typesDeCartes = {
 			new Configuration(10, new Borne(25)),
@@ -72,11 +76,12 @@ public class JeuDeCartes {
 	}
 	
 	public boolean checkCount() {
-		Carte[] tabCartes = donnerCartes();
-		int nbMax = 0;
-		for (int i = 0; i < typesDeCartes.length; i++) {
-			nbMax += typesDeCartes[i].nbExemplaire;
-		}
-		return nbMax == tabCartes.length;
+	    List<Carte> cartes = Arrays.asList(donnerCartes());
+	    for (Configuration configuration : typesDeCartes) {
+	        if (Collections.frequency(cartes, configuration.getCarte()) != configuration.getNbExemplaire()) {
+	            return false;
+	        }
+	    }
+	    return true;
 	}
 }
